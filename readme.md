@@ -28,14 +28,14 @@ An example using `PROTONMAIL_USER` and `PROTONMAIL_PASS`:
 $ docker run -d -p 1025:1025 -p 1143:1143 -p 8080:8080 \
     -e PROTONMAIL_USER="username@protonmail.com" \
     -e PROTONMAIL_PASS="v3ry-str0ng-pass" \
-    ghcr.io/alexcote1/hydroxide-container:maste
+    ghcr.io/alexcote1/hydroxide-container:master
 ```
 
 An example using a mounted `auth.json`:
 ```
 $ docker run -d -p 1025:1025 -p 1143:1143 -p 8080:8080 \
     -v $HOME/.config/hydroxide:/home/hydroxide/.config/hydroxide:rw \
-    ghcr.io/alexcote1/hydroxide-container:maste
+    ghcr.io/alexcote1/hydroxide-container:master
 ```
 
 ## Environemnt Variables
