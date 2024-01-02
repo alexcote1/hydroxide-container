@@ -7,11 +7,11 @@ A containerized version of [Hydroxide.](https://github.com/emersion/hydroxide)
 There are two ways to use this container.
 
 ### Directly interacting with hydroxide
-This is helpful if you need to run the `auth` sub-command directly or you would like to bypass the wrapper. All arguements passed after `jsckh/hydroxide` will be passed as arguments directly to `hydroxide`.
+This is helpful if you need to run the `auth` sub-command directly or you would like to bypass the wrapper. All arguements passed after `ghcr.io/alexcote1/hydroxide-container:master` will be passed as arguments directly to `hydroxide`.
 
 An example running `hydroxide auth` via the container:
 ```
-$ docker run -it -v $HOME/.config/hydroxide:/home/hydroxide/.config/hydroxide:rw jsckh/hydroxide auth
+$ docker run -it -v $HOME/.config/hydroxide:/home/hydroxide/.config/hydroxide:rw ghcr.io/alexcote1/hydroxide-container:master auth
 ```
 
 ### Using the wrapper to handle hydroxide
@@ -28,14 +28,14 @@ An example using `PROTONMAIL_USER` and `PROTONMAIL_PASS`:
 $ docker run -d -p 1025:1025 -p 1143:1143 -p 8080:8080 \
     -e PROTONMAIL_USER="username@protonmail.com" \
     -e PROTONMAIL_PASS="v3ry-str0ng-pass" \
-    jsckh/hydroxide
+    ghcr.io/alexcote1/hydroxide-container:maste
 ```
 
 An example using a mounted `auth.json`:
 ```
 $ docker run -d -p 1025:1025 -p 1143:1143 -p 8080:8080 \
     -v $HOME/.config/hydroxide:/home/hydroxide/.config/hydroxide:rw \
-    jsckh/hydroxide
+    ghcr.io/alexcote1/hydroxide-container:maste
 ```
 
 ## Environemnt Variables
